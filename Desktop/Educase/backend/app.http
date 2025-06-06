@@ -1,0 +1,52 @@
+### Register a new user
+POST http://localhost:3001/register
+Content-Type: application/json
+
+{
+  "name": "testuser",
+  "number": "1234567890",
+  "email": "test@example.com",
+  "company": "Test Company",
+  "password": "test123"
+}
+
+###
+
+### Login user
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+  "name": "testuser",
+  "password": "test123"
+}
+
+###
+
+# Copy the token from the login response and paste it below
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJuYW1lIjoiVGVzdFVzZXIiLCJpYXQiOjE3NDkwOTY2NTZ9.U3-yxJDh263kfksUZgnXewb_vwblkTfIq21A55X7f5U
+
+### Get user profile using token
+GET http://localhost:3001/profile
+Authorization: Bearer {{token}}
+
+### Test invalid registration (missing fields)
+POST http://localhost:3001/register
+Content-Type: application/json
+
+{
+  "name": "testuser2",
+  "password": "test"
+}
+
+### Test invalid login (wrong password)
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+  "name": "testuser",
+  "password": "wrongpassword"
+}
+
+### Test profile without token
+GET http://localhost:3001/profile

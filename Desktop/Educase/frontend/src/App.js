@@ -7,13 +7,16 @@ import Profile from './components/Profile';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingScreen />} />
-        <Route path="/login" element={<LoginScreen />} />
-        <Route path="/sign" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+    <BrowserRouter basename="/Educase-company">
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingScreen />} />
+          <Route path="/login" element={<LoginScreen />} />
+          <Route path="/sign" element={<SignUp />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<LandingScreen />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaStarOfLife } from "react-icons/fa";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
 const SignUp = () => {
@@ -35,20 +37,23 @@ const SignUp = () => {
         }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
-        alert("Registration successful! Redirecting to login.");
-        navigate("/login");
+        toast.success("Registration successful! Redirecting to login.");
+        setTimeout(() => navigate("/login"), 1500);
       } else {
-        const errorText = await response.text();
-        alert("Error: " + errorText);
+        toast.error(data.error || "Registration failed");
       }
     } catch (error) {
-      alert("Failed to register. Please try again later.");
+      console.error("Registration error:", error);
+      toast.error("Failed to register. Please try again later.");
     }
   };
 
   return (
     <div className="sign-up-container">
+      <ToastContainer position="top-center" />
       <div className="form-main-container">
         <h1>Create your PopX account</h1>
         <div className="form-container">
