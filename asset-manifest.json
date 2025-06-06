@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Educase-company/static/css/main.4dac3f82.css",
-    "main.js": "/Educase-company/static/js/main.3066f03c.js",
+    "main.css": "/Educase-company/static/css/main.468f4c81.css",
+    "main.js": "/Educase-company/static/js/main.26f434dd.js",
     "static/js/453.8ab44547.chunk.js": "/Educase-company/static/js/453.8ab44547.chunk.js",
     "index.html": "/Educase-company/index.html",
-    "main.4dac3f82.css.map": "/Educase-company/static/css/main.4dac3f82.css.map",
-    "main.3066f03c.js.map": "/Educase-company/static/js/main.3066f03c.js.map",
+    "main.468f4c81.css.map": "/Educase-company/static/css/main.468f4c81.css.map",
+    "main.26f434dd.js.map": "/Educase-company/static/js/main.26f434dd.js.map",
     "453.8ab44547.chunk.js.map": "/Educase-company/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4dac3f82.css",
-    "static/js/main.3066f03c.js"
+    "static/css/main.468f4c81.css",
+    "static/js/main.26f434dd.js"
   ]
 }
