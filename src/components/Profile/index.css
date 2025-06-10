@@ -1,0 +1,102 @@
+.main-profile-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+}
+.main-profile-container .main-heading {
+    color: var(--color-gray-900);
+    font-size: 30px ;
+    font-family: "Rubik", "sans-serif";
+    font-weight:bolder;
+    margin:0;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.main-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+.main-profile-details-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.profile-details h1 {
+    color: var(--color-gray-900);
+    font-size: 20px ;
+    font-family: "Rubik", "sans-serif";
+    font-weight:bolder;
+    margin:0;
+}
+.profile-details p {
+    color: #757373;
+    font-size: 14px ;
+    font-family: "Rubik", "sans-serif";
+    font-weight:bolder;
+    margin:0;
+}
+/* ProfilePicture.css */
+.profile-container {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.camera-icon {
+  position: absolute;
+  bottom:40px;
+  left:55px;
+  background-color: oklch(0.541 0.281 293.009);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera-icon i {
+  font-size: 10px;
+  color: #fff;
+  border-radius: 100px;
+}
+
+.profile-description {
+    width: 100%;
+}
+.profile-description p {
+    color: #524f4f;
+    font-size: 17px;
+    margin: 0;
+    font-family: "Rubik", 'sans-serif';
+}
