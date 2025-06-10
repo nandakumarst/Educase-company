@@ -10,29 +10,37 @@ const Details = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       const token = localStorage.getItem("token");
+      console.log("Profile component - Token from localStorage:", token);
+      
       if (!token) {
-        navigate("/login-screen");
+        console.log("No token found, redirecting to login");
+        navigate("/login", { replace: true });
         return;
       }
 
       try {
+        console.log("Fetching profile data...");
         const response = await fetch("http://localhost:3001/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
 
+        console.log("Profile response status:", response.status);
+        
         if (response.ok) {
           const data = await response.json();
+          console.log("Profile data received:", data);
           setProfile(data);
         } else {
+          console.log("Profile fetch failed, removing token and redirecting");
           localStorage.removeItem("token");
-          navigate("/login-screen");
+          navigate("/login", { replace: true });
         }
       } catch (error) {
-        console.error(error);
+        console.error("Profile fetch error:", error);
         localStorage.removeItem("token");
-        navigate("/login-screen");
+        navigate("/login", { replace: true });
       }
     };
 

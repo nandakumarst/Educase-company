@@ -33,7 +33,12 @@ const LoginScreen = () => {
     if (response.ok) {
       toast.success(data.message);
       localStorage.setItem("token", data.token);
-      setTimeout(() => navigate("/profile"), 1500);
+      console.log("Login successful, token stored:", data.token);
+      console.log("Attempting navigation to /Educase-company/profile");
+      setTimeout(() => {
+        console.log("Executing navigation");
+        navigate("/profile", { replace: true });
+      }, 1000);
     } else {
       toast.error(data.message || data || "Login failed");
     }
