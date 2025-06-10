@@ -13,42 +13,62 @@ const SignUp = () => {
   const [mail, setMail] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [radio, setRadio] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
   const isFormValid =
-    name.trim() !== "" &&
-    mobileNum.trim() !== "" &&
-    password.trim() !== "" &&
-    mail.trim() !== "" &&
-    radio.trim() !== "";
+    name.trim() &&
+    mobileNum.trim() &&
+    password.trim() &&
+    mail.trim() &&
+    radio.trim();
 
-  const handleSignUp = async () => {
-    if (!isFormValid) return;
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    if (!isFormValid || submitting) return;
 
-    try {
-      const response = await fetch("http://localhost:3001/register", {
+    const payload = {
+      name: name.trim(),
+      number: mobileNum.trim(),
+      email: mail.trim(),
+      company: companyName.trim(),
+      password: password.trim(),
+    };
+
+    const doRegister = async () => {
+      const res = await fetch("http://localhost:3001/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          number: mobileNum.trim(),
-          email: mail.trim(),
-          company: companyName.trim(),
-          password: password.trim(),
-        }),
+        body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
-
-      if (response.ok) {
-        toast.success("Registration successful! Redirecting to login.");
-        setTimeout(() => navigate("/login"), 1500);
-      } else {
-        toast.error(data.error || "Registration failed");
+      let data;
+      try {
+        data = await res.json();
+      } catch {
+        data = {};
       }
-    } catch (error) {
-      console.error("Registration error:", error);
-      toast.error("Failed to register. Please try again later.");
-    }
+
+      if (!res.ok) {
+        throw new Error(data.error || `Server error ${res.status}`);
+      }
+
+      return data;
+    };
+
+    setSubmitting(true);
+
+    toast
+      .promise(doRegister(), {
+        pending: "Registering your account…",
+        success: "Registration successful! Redirecting…",
+        error: {
+          render({ data }) {
+            return data?.message || data || "Registration failed!";
+          },
+        },
+      })
+      .then(() => setTimeout(() => navigate("/login"), 1500))
+      .finally(() => setSubmitting(false));
   };
 
   return (
@@ -56,7 +76,8 @@ const SignUp = () => {
       <ToastContainer position="top-center" />
       <div className="form-main-container">
         <h1>Create your PopX account</h1>
-        <div className="form-container">
+        <form className="form-container" onSubmit={handleSignUp}>
+          {/* Full Name */}
           <div className="input-group">
             <label className="input-label">
               Full Name <FaStarOfLife className="star" />
@@ -69,6 +90,8 @@ const SignUp = () => {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
+
+          {/* Phone Number */}
           <div className="input-group">
             <label className="input-label">
               Phone Number <FaStarOfLife className="star" />
@@ -81,18 +104,22 @@ const SignUp = () => {
               onChange={(e) => setMobileNum(e.target.value)}
             />
           </div>
+
+          {/* Email */}
           <div className="input-group">
             <label className="input-label">
               Email <FaStarOfLife className="star" />
             </label>
             <input
               type="email"
-              placeholder="Enter email address"
+              placeholder="Enter email"
               className="input-field"
               value={mail}
               onChange={(e) => setMail(e.target.value)}
             />
           </div>
+
+          {/* Password */}
           <div className="input-group">
             <label className="input-label">
               Password <FaStarOfLife className="star" />
@@ -105,6 +132,8 @@ const SignUp = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+
+          {/* Company */}
           <div className="input-group">
             <label className="input-label">Company name</label>
             <input
@@ -115,41 +144,34 @@ const SignUp = () => {
               onChange={(e) => setCompanyName(e.target.value)}
             />
           </div>
+
+          {/* Agency Radio */}
           <div className="radio-main-container">
             <p>
               Are you an agency? <FaStarOfLife className="star" />
             </p>
             <div className="radio-group">
-              <label className="radio-container">
-                Yes
-                <input
-                  type="radio"
-                  name="choice"
-                  value="yes"
-                  onChange={() => setRadio("yes")}
-                />
+              <label className="radio-container">Yes
+                <input type="radio" value="yes" name="choice" onChange={() => setRadio("yes")} />
                 <span className="checkmark"></span>
               </label>
-              <label className="radio-container">
-                No
-                <input
-                  type="radio"
-                  name="choice"
-                  value="no"
-                  onChange={() => setRadio("no")}
-                />
+              <label className="radio-container">No
+                <input type="radio" value="no" name="choice" onChange={() => setRadio("no")} />
                 <span className="checkmark"></span>
               </label>
             </div>
           </div>
-        </div>
+
+          {/* Submit */}
+          <button
+            type="submit"
+            className={`sign-up-btn ${isFormValid && !submitting ? "active" : "inactive"}`}
+            disabled={!isFormValid || submitting}
+          >
+            {submitting ? "Registering…" : "Create Account"}
+          </button>
+        </form>
       </div>
-      <button
-        className={`sign-up-btn ${isFormValid ? "active" : "inactive"}`}
-        onClick={handleSignUp}
-      >
-        Create Account
-      </button>
     </div>
   );
 };
