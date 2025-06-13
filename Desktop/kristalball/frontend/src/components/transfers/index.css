@@ -1,0 +1,109 @@
+.transfers-container {
+  padding: 24px;
+}
+
+.transfers-container .ant-card {
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.transfers-container .ant-card-head {
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 24px;
+}
+
+.transfers-container .ant-card-head-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.transfers-container .ant-card-extra {
+  padding: 0;
+}
+
+.transfers-container .ant-table {
+  margin-top: 16px;
+}
+
+.transfers-container .ant-table-thead > tr > th {
+  background: var(--background-light);
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 12px 16px;
+}
+
+.transfers-container .ant-table-tbody > tr > td {
+  padding: 12px 16px;
+}
+
+.transfers-container .ant-table-tbody > tr:hover > td {
+  background: var(--background-light);
+}
+
+.transfers-container .ant-tag {
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.transfers-container .ant-space {
+  gap: 8px !important;
+}
+
+.transfers-container .ant-btn {
+  padding: 4px 8px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.transfers-container .ant-btn-text {
+  color: var(--text-secondary);
+}
+
+.transfers-container .ant-btn-text:hover {
+  color: var(--primary-color);
+  background: var(--background-light);
+}
+
+.transfers-container .ant-btn-text.ant-btn-dangerous {
+  color: var(--error-color);
+}
+
+.transfers-container .ant-btn-text.ant-btn-dangerous:hover {
+  color: #ff4d4f;
+  background: #fff1f0;
+}
+
+.transfers-container .status-filter {
+  min-width: 120px;
+}
+
+.transfers-container .status-filter .ant-select-selector {
+  border-radius: 6px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .transfers-container {
+    padding: 16px;
+  }
+
+  .transfers-container .ant-card-head {
+    padding: 12px 16px;
+  }
+
+  .transfers-container .ant-table-thead > tr > th,
+  .transfers-container .ant-table-tbody > tr > td {
+    padding: 8px 12px;
+  }
+
+  .transfers-container .ant-space {
+    gap: 4px !important;
+  }
+
+  .transfers-container .status-filter {
+    min-width: 100px;
+  }
+} 

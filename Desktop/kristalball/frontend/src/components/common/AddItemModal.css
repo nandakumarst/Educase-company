@@ -1,0 +1,58 @@
+.add-item-form {
+  padding: 24px 0;
+}
+
+.add-item-form .ant-form-item {
+  margin-bottom: 24px;
+}
+
+.add-item-form .ant-form-item-label {
+  padding-bottom: 8px;
+}
+
+.add-item-form .ant-form-item-label > label {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.add-item-form .ant-input,
+.add-item-form .ant-select-selector,
+.add-item-form .ant-picker {
+  border-radius: 4px;
+}
+
+.add-item-form .ant-input:hover,
+.add-item-form .ant-select-selector:hover,
+.add-item-form .ant-picker:hover {
+  border-color: #40a9ff;
+}
+
+.add-item-form .ant-input:focus,
+.add-item-form .ant-select-selector:focus,
+.add-item-form .ant-picker:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.add-item-form .ant-input-textarea {
+  min-height: 100px;
+}
+
+.add-item-form .ant-modal-footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 16px 24px;
+}
+
+.add-item-form .ant-modal-footer button {
+  min-width: 80px;
+}
+
+@media (max-width: 576px) {
+  .add-item-form {
+    padding: 16px 0;
+  }
+
+  .add-item-form .ant-form-item {
+    margin-bottom: 16px;
+  }
+} 

@@ -1,0 +1,121 @@
+/* Sidebar */
+.site-sider {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  transition: var(--transition-base);
+  background: var(--background-white) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.sider-header {
+  height: 64px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sider-header h2 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 20px;
+  transition: var(--transition-base);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+/* Menu */
+.ant-menu {
+  padding: 8px 0;
+}
+
+.ant-menu-item {
+  margin: 4px 8px !important;
+  border-radius: 6px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  transition: var(--transition-base);
+}
+
+.ant-menu-item:hover {
+  background-color: rgba(24, 144, 255, 0.05) !important;
+}
+
+.ant-menu-item-selected {
+  background-color: rgba(24, 144, 255, 0.1) !important;
+  color: var(--primary-color) !important;
+}
+
+.ant-menu-item .anticon {
+  font-size: 18px;
+}
+
+/* Tabs */
+.ant-tabs {
+  width: 100%;
+}
+
+.ant-tabs-tab {
+  transition: var(--transition-base);
+  padding: 12px 16px;
+  margin: 0 16px 0 0;
+}
+
+.ant-tabs-tab:hover {
+  color: var(--primary-hover);
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.ant-tabs-ink-bar {
+  background: var(--primary-color);
+  height: 3px;
+  border-radius: 3px;
+}
+
+/* Breadcrumb */
+.ant-breadcrumb {
+  margin-bottom: 16px;
+}
+
+.ant-breadcrumb-link {
+  color: var(--text-secondary);
+}
+
+.ant-breadcrumb-link:hover {
+  color: var(--primary-color);
+}
+
+/* Pagination */
+.ant-pagination {
+  margin: 16px 0;
+}
+
+.ant-pagination-item {
+  border-radius: 6px;
+  transition: var(--transition-base);
+}
+
+.ant-pagination-item:hover {
+  border-color: var(--primary-color);
+}
+
+.ant-pagination-item-active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.ant-pagination-item-active a {
+  color: white;
+} 

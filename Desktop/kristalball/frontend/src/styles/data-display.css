@@ -1,0 +1,136 @@
+/* Card */
+.ant-card {
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  border: 1px solid var(--border-color);
+  background: var(--background-white);
+}
+
+.ant-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.ant-card-head {
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 24px;
+}
+
+.ant-card-head-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Table */
+.ant-table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.ant-table-thead > tr > th {
+  background: var(--background-light);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: var(--background-light);
+}
+
+/* List */
+.ant-list {
+  border-radius: 12px;
+  background: var(--background-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.ant-list-item {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ant-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Descriptions */
+.ant-descriptions {
+  background: var(--background-white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.ant-descriptions-item-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Badge */
+.ant-badge {
+  font-size: 14px;
+}
+
+.ant-badge-count {
+  box-shadow: 0 0 0 1px var(--background-white);
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  padding: 0 6px;
+}
+
+/* Tag */
+.ant-tag {
+  border-radius: 6px;
+  padding: 2px 8px;
+  margin: 4px;
+  transition: var(--transition-base);
+}
+
+.ant-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Avatar */
+.ant-avatar {
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+.ant-avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Empty */
+.ant-empty {
+  margin: 32px 0;
+}
+
+.ant-empty-image {
+  height: 100px;
+  margin-bottom: 16px;
+}
+
+.ant-empty-description {
+  color: var(--text-secondary);
+}
+
+/* Skeleton */
+.ant-skeleton {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--background-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.ant-skeleton-title {
+  margin-bottom: 16px;
+}
+
+.ant-skeleton-paragraph {
+  margin-bottom: 16px;
+} 

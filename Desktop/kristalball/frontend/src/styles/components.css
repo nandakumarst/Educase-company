@@ -1,0 +1,618 @@
+/* Global Layout Styles */
+.site-layout {
+  margin-left: 250px;
+  transition: all 0.2s;
+}
+
+.site-content {
+  margin: 24px;
+  padding: 24px;
+  background: #fff;
+  min-height: calc(100vh - 48px);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styles */
+.ant-layout-sider {
+  position: fixed !important;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+/* Common Component Styles */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.page-header h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Table Styles */
+.ant-table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background: #fafafa !important;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f5f5f5;
+}
+
+/* Form Styles */
+.ant-form-item-label > label {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.ant-input,
+.ant-select-selector,
+.ant-input-number {
+  border-radius: 4px !important;
+}
+
+.ant-input:hover,
+.ant-select-selector:hover,
+.ant-input-number:hover {
+  border-color: #40a9ff !important;
+}
+
+/* Button Styles */
+.ant-btn {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+}
+
+/* Modal Styles */
+.ant-modal-content {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ant-modal-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 24px;
+}
+
+.ant-modal-body {
+  padding: 24px;
+}
+
+/* Tag Styles */
+.ant-tag {
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+/* Card Styles */
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 24px;
+}
+
+.ant-card-body {
+  padding: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .site-layout {
+    margin-left: 0;
+  }
+
+  .ant-layout-sider {
+    position: absolute !important;
+    left: -250px;
+  }
+
+  .site-content {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .page-header .ant-space {
+    width: 100%;
+  }
+
+  .ant-table {
+    overflow-x: auto;
+  }
+}
+
+/* Assets Component Specific Styles */
+.assets-container {
+  padding: 0;
+}
+
+.assets-container .ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.assets-container .ant-table-pagination {
+  margin: 16px 24px !important;
+}
+
+/* Transfers Component Specific Styles */
+.transfers-container {
+  padding: 0;
+}
+
+.transfers-container .ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Purchases Component Specific Styles */
+.purchases-container {
+  padding: 0;
+}
+
+.purchases-container .ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Assignments Component Specific Styles */
+.assignments-container {
+  padding: 0;
+}
+
+.assignments-container .ant-tabs-nav {
+  margin-bottom: 24px;
+}
+
+.assignments-container .ant-tabs-tab {
+  padding: 12px 24px;
+}
+
+.assignments-container .ant-tabs-tab-active {
+  background: #e6f7ff;
+  border-radius: 4px;
+}
+
+/* Dashboard Component Specific Styles */
+.dashboard-container {
+  padding: 0;
+}
+
+.dashboard-container .ant-row {
+  margin-bottom: 24px;
+}
+
+.dashboard-container .ant-card {
+  height: 100%;
+}
+
+.dashboard-container .ant-statistic-title {
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+.dashboard-container .ant-statistic-content {
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Layout Styles */
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-content {
+  margin-left: 250px !important;
+  padding: 24px !important;
+  background: #f0f2f5 !important;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  padding: 24px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dashboard-filters {
+  display: flex;
+  gap: 16px;
+}
+
+.stat-card {
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+.stat-info h3 {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.stat-info p {
+  margin: 4px 0 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Transfers Styles */
+.transfers {
+  padding: 24px;
+}
+
+.transfers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.transfers .ant-table {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.transfers .ant-table-thead > tr > th {
+  background: #fafafa;
+}
+
+.transfers .ant-tag {
+  text-transform: capitalize;
+}
+
+/* Purchases Styles */
+.purchases {
+  padding: 24px;
+}
+
+.purchases-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.filters-card {
+  margin-bottom: 24px;
+}
+
+.purchases-table {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Assignments Styles */
+.assignments {
+  padding: 24px;
+}
+
+.assignments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.assignments .ant-tabs-nav {
+  margin-bottom: 24px;
+}
+
+.assignments .ant-table {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ant-layout-content {
+    margin-left: 0 !important;
+  }
+
+  .ant-layout-sider {
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    left: -250px;
+    transition: all 0.3s;
+  }
+
+  .ant-layout-sider-collapsed {
+    left: 0;
+  }
+
+  .dashboard-header,
+  .transfers-header,
+  .purchases-header,
+  .assignments-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dashboard-filters {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .stat-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .filters-card .ant-space {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filters-card .ant-space-item {
+    width: 100%;
+  }
+}
+
+/* Transfers Component Styles */
+.transfers-container .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.transfers-container .ant-table {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transfers-container .ant-table-thead > tr > th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.transfers-container .ant-tag {
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.transfers-container .ant-space {
+  gap: 8px !important;
+}
+
+.transfers-container .ant-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transfers-container .ant-modal-content {
+  border-radius: 8px;
+}
+
+.transfers-container .ant-form-item-label {
+  font-weight: 500;
+}
+
+.transfers-container .ant-select-selector {
+  border-radius: 4px !important;
+}
+
+.transfers-container .ant-input-number {
+  width: 100%;
+}
+
+.transfers-container .ant-picker {
+  width: 100%;
+}
+
+/* Assets Component Styles */
+.assets-container .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.assets-container .ant-table {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.assets-container .ant-table-thead > tr > th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.assets-container .ant-tag {
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 500;
+}
+
+.assets-container .ant-btn {
+  border-radius: 4px;
+}
+
+.assets-container .ant-input-affix-wrapper {
+  border-radius: 4px;
+}
+
+.assets-container .ant-modal-content {
+  border-radius: 8px;
+}
+
+.assets-container .ant-form-item-label > label {
+  font-weight: 500;
+}
+
+.assets-container .ant-select-selector {
+  border-radius: 4px !important;
+}
+
+.assets-container .ant-input-number {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .assets-container .page-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .assets-container .page-header .ant-space {
+    width: 100%;
+  }
+
+  .assets-container .page-header .ant-input-affix-wrapper {
+    width: 100% !important;
+  }
+}
+
+/* Sidebar Specific Styles */
+.site-sider {
+  position: fixed !important;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  transition: all 0.2s;
+}
+
+.sider-header {
+  height: 64px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.site-sider .ant-menu {
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.site-sider .ant-menu-item {
+  margin: 4px 8px !important;
+  border-radius: 4px;
+}
+
+.site-sider .ant-menu-item-selected {
+  background-color: #e6f7ff !important;
+}
+
+.site-sider .ant-menu-item:hover {
+  background-color: #f5f5f5 !important;
+}
+
+.site-sider .ant-menu-item .anticon {
+  font-size: 18px;
+}
+
+.site-sider .ant-menu-item a {
+  color: #1a1a1a;
+}
+
+.site-sider .ant-menu-item-selected a {
+  color: #1890ff;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .site-sider {
+    left: -250px;
+  }
+
+  .site-sider.ant-layout-sider-collapsed {
+    left: 0;
+  }
+
+  .site-layout {
+    margin-left: 0 !important;
+  }
+} 
